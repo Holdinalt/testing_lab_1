@@ -9,4 +9,6 @@ public class first {
     public static double calc(double digit){
         return Math.asin(digit);
     }
+
+    
 }

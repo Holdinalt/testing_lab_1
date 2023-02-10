@@ -18,4 +18,13 @@ class FirstTaskTests {
         double expected = calc(0);
         Assertions.assertEquals(expected, 0);
     }
+
+    @Test
+    void calcTestGrouped() {
+        double[] numbers = {-Math.PI / 2, 0};
+        Assertions.assertAll("numbers",
+                () -> Assertions.assertEquals(numbers[0], calc(-1)),
+                () -> Assertions.assertEquals(numbers[1], calc(0))
+        );
+    }
 }
