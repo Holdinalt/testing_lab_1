@@ -1,21 +1,17 @@
-package main;
-
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static main.first.calc;
+import org.junit.jupiter.api.Assertions;
 
 class FirstTaskTests {
 
     @Test
     void calcTestMinusOne() {
-        double expected = calc(-1);
+        double expected = first.calc(-1);
         Assertions.assertEquals(expected, -(Math.PI / 2));
     }
 
     @Test
     void calcTestZero() {
-        double expected = calc(0);
+        double expected = first.calc(0);
         Assertions.assertEquals(expected, 0);
     }
 
@@ -23,8 +19,8 @@ class FirstTaskTests {
     void calcTestGrouped() {
         double[] numbers = {-Math.PI / 2, 0};
         Assertions.assertAll("numbers",
-                () -> Assertions.assertEquals(numbers[0], calc(-1)),
-                () -> Assertions.assertEquals(numbers[1], calc(0))
+                () -> Assertions.assertEquals(numbers[0], first.calc(-1)),
+                () -> Assertions.assertEquals(numbers[1], first.calc(0))
         );
     }
 }
