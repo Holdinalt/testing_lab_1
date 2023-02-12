@@ -1,8 +1,8 @@
 package lab1.thirdTask;
 
-import thirdTask.Entities.Bombing;
-import thirdTask.Entities.ComputerBank;
-import thirdTask.Entities.They;
+import lab1.thirdTask.Entities.Bombing;
+import lab1.thirdTask.Entities.ComputerBank;
+import lab1.thirdTask.Entities.They;
 
 public class ThirdTask {
 
