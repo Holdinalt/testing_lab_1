@@ -1,4 +1,4 @@
-package thirdTask;
+package lab1.thirdTask;
 
 import thirdTask.Entities.Bombing;
 import thirdTask.Entities.ComputerBank;

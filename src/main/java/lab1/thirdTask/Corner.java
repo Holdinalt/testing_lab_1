@@ -1,8 +1,8 @@
-package thirdTask;
+package lab1.thirdTask;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import thirdTask.Entities.Entity;
+import lab1.thirdTask.Entities.Entity;
 
 public class Corner {
     ArrayList<Entity> entities = new ArrayList<>();

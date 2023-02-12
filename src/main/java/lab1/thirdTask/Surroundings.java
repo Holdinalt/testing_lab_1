@@ -1,6 +1,6 @@
-package thirdTask;
+package lab1.thirdTask;
 
-import thirdTask.Entities.Entity;
+import lab1.thirdTask.Entities.Entity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
