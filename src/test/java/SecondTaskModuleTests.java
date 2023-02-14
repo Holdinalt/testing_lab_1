@@ -8,6 +8,8 @@ class SecondTaskModuleTests {
 
     static BinomialHeap binHeap;
 
+    //2d tests
+
     @Test
     void Insertable(){
         binHeap = new BinomialHeap();
