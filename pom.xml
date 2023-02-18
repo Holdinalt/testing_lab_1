@@ -40,7 +40,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M8</version>
                 <configuration>
-                    <test>task1.tests</test>
+                    <test>task1.tests,SecondTaskModuleTests</test>
                 </configuration>
             </plugin>
         </plugins>
