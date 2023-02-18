@@ -1,4 +1,4 @@
-package task1;
+package lab1.task1;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.params.ParameterizedTest;

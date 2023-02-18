@@ -1,3 +1,5 @@
+package lab1;
+
 import lab1.BinomialHeap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
