@@ -6,7 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import lab1.FirstTask;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class tests {
+public class AsinTest {
     double delta = 0.01;
 
     @ParameterizedTest

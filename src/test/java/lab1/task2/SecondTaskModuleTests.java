@@ -1,4 +1,4 @@
-package lab1;
+package lab1.task2;
 
 import lab1.BinomialHeap;
 import org.junit.jupiter.api.BeforeEach;
