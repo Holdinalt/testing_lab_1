@@ -9,14 +9,14 @@ public class ThirdTask {
         surroundings.addToCornerEntity(new They());
         ComputerBank computerBank = new ComputerBank();
 
-        //System.out.println("<--- Начало текста --->");
+        System.out.println("<--- Начало текста --->");
 
         Bombing bombing = new Bombing(surroundings);
         bombing.giveDamage(computerBank, 30);*/
         Surroundings surroundings = new Surroundings();
         ComputerBank computerBank = new ComputerBank();
         Bombing bombing = new Bombing(surroundings);
-        bombing.giveDamage(computerBank, 30);
+        bombing.giveDamage(computerBank, 15);
         computerBank.printLife();
     }
 }

@@ -11,7 +11,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 public class ModelTest {
-    private final PrintStream standardOut = System.out;
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
     @BeforeEach
@@ -61,6 +60,20 @@ public class ModelTest {
 
     @Test
     void BombingTest()
+    {
+        Surroundings surroundings = new Surroundings();
+        ComputerBank computerBank = new ComputerBank();
+        Bombing bombing = new Bombing(surroundings);
+        bombing.giveDamage(computerBank, 15);
+        computerBank.printLife();
+        assertEquals("Началась Бомбардировка" + System.lineSeparator() +
+                "Вокруг невообразимый жар" + System.lineSeparator() +
+                "Вокруг невообразимый шум" + System.lineSeparator() +
+                "Состояние Компьютерный банк = 85%", outputStreamCaptor.toString().trim());
+    }
+
+    @Test
+    void MetalMeltingTest()
     {
         Surroundings surroundings = new Surroundings();
         ComputerBank computerBank = new ComputerBank();

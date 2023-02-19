@@ -1,10 +1,11 @@
 package lab1.task1;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import lab1.FirstTask;
-import org.junit.jupiter.params.provider.ValueSource;
 
 public class AsinTest {
     double delta = 0.01;
