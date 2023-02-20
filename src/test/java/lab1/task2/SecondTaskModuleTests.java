@@ -1,6 +1,6 @@
 package lab1.task2;
 
-import lab1.BinomialHeap;
+import lab1.task3.BinomialHeap;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

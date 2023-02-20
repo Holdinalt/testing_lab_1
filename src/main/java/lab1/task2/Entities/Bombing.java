@@ -1,6 +1,6 @@
-package lab1.thirdTask.Entities;
+package lab1.task2.Entities;
 
-import lab1.thirdTask.Surroundings;
+import lab1.task2.Surroundings;
 
 public class Bombing {
 

@@ -1,11 +1,12 @@
 package lab1.task3;
 
+import lab1.task2.Corner;
+import lab1.task2.Surroundings;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import lab1.thirdTask.*;
-import lab1.thirdTask.Entities.*;
+import lab1.task2.Entities.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

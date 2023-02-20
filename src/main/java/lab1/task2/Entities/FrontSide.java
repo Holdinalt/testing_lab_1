@@ -1,4 +1,4 @@
-package lab1.thirdTask.Entities;
+package lab1.task2.Entities;
 
 public class FrontSide extends Entity{
 

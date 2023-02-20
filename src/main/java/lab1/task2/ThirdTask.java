@@ -1,6 +1,6 @@
-package lab1.thirdTask;
+package lab1.task2;
 
-import lab1.thirdTask.Entities.*;
+import lab1.task2.Entities.*;
 
 public class ThirdTask {
 
