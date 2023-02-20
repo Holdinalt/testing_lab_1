@@ -1,7 +1,5 @@
 package lab1;
 
-import java.lang.Math;
-
 public class FirstTask {
     public static double arcsin(double x){
         if (Math.abs(x) > 1)

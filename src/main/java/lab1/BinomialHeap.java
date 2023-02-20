@@ -89,9 +89,8 @@ class BinomialHeapNode {
     // To get the size
     public int getSize()
     {
-        return (
-                1 + ((child == null) ? 0 : child.getSize())
-                        + ((sibling == null) ? 0 : sibling.getSize()));
+        return 1 + ((child == null) ? 0 : child.getSize())
+                        + ((sibling == null) ? 0 : sibling.getSize());
     }
 }
 
@@ -150,7 +149,7 @@ public class BinomialHeap {
     {
         BinomialHeapNode temp1 = Nodes, temp2 = binHeap;
 
-        while ((temp1 != null) && (temp2 != null)) {
+        while (temp1 != null && temp2 != null) {
 
             if (temp1.degree == temp2.degree) {
 
@@ -165,9 +164,9 @@ public class BinomialHeap {
 
                 if (temp1.degree < temp2.degree) {
 
-                    if ((temp1.sibling == null)
-                            || (temp1.sibling.degree
-                            > temp2.degree)) {
+                    if (temp1.sibling == null
+                            || temp1.sibling.degree
+                            > temp2.degree) {
                         BinomialHeapNode tmp = temp2;
                         temp2 = temp2.sibling;
                         tmp.sibling = temp1.sibling;
@@ -189,9 +188,6 @@ public class BinomialHeap {
                     if (tmp == Nodes) {
                         Nodes = temp1;
                     }
-
-                    else {
-                    }
                 }
             }
         }
@@ -203,9 +199,6 @@ public class BinomialHeap {
                 temp1 = temp1.sibling;
             }
             temp1.sibling = temp2;
-        }
-
-        else {
         }
     }
 
@@ -220,10 +213,10 @@ public class BinomialHeap {
 
         while (nextTemp != null) {
 
-            if ((temp.degree != nextTemp.degree)
-                    || ((nextTemp.sibling != null)
-                    && (nextTemp.sibling.degree
-                    == temp.degree))) {
+            if (temp.degree != nextTemp.degree
+                    || nextTemp.sibling != null
+                    && nextTemp.sibling.degree
+                    == temp.degree) {
                 prevTemp = temp;
                 temp = nextTemp;
             }
@@ -271,8 +264,8 @@ public class BinomialHeap {
     public void delete(int value)
     {
 
-        if ((Nodes != null)
-                && (Nodes.findANodeWithKey(value) != null)) {
+        if (Nodes != null
+                && Nodes.findANodeWithKey(value) != null) {
             decreaseKeyValue(value, findMinimum() - 1);
             extractMin();
         }
@@ -290,8 +283,8 @@ public class BinomialHeap {
         temp.key = new_value;
         BinomialHeapNode tempParent = temp.parent;
 
-        while ((tempParent != null)
-                && (temp.key < tempParent.key)) {
+        while (tempParent != null
+                && temp.key < tempParent.key) {
             int z = temp.key;
             temp.key = tempParent.key;
             tempParent.key = z;
@@ -331,16 +324,16 @@ public class BinomialHeap {
             temp = temp.sibling;
         }
 
-        if ((Nodes == null) && (fakeNode == null)) {
+        if (Nodes == null && fakeNode == null) {
             size = 0;
         }
         else {
-            if ((Nodes == null) && (fakeNode != null)) {
+            if (Nodes == null && fakeNode != null) {
                 Nodes = fakeNode.reverse(null);
                 size = Nodes.getSize();
             }
             else {
-                if ((Nodes != null) && (fakeNode == null)) {
+                if (Nodes != null && fakeNode == null) {
                     size = Nodes.getSize();
                 }
                 else {
