@@ -109,9 +109,6 @@ public class BinomialHeap {
         size = 0;
     }
 
-    // Checking if heap is empty
-    public boolean isEmpty() { return Nodes == null; }
-
     // Method 1
     // To get the size
     public int getSize() { return size; }
@@ -328,32 +325,20 @@ public class BinomialHeap {
             size = 0;
         }
         else {
-            if (Nodes == null && fakeNode != null) {
+            if (Nodes == null) {
                 Nodes = fakeNode.reverse(null);
-                size = Nodes.getSize();
             }
             else {
-                if (Nodes != null && fakeNode == null) {
-                    size = Nodes.getSize();
-                }
-                else {
+                if (fakeNode != null) {
                     unionNodes(fakeNode.reverse(null));
-                    size = Nodes.getSize();
                 }
             }
+            size = Nodes.getSize();
         }
 
         return minNode.key;
     }
 
-    // Method 10
-    // To display heap
-    public void displayHeap()
-    {
-        System.out.print("\nHeap : ");
-        displayHeap(Nodes);
-        System.out.println("\n");
-    }
 
     public int[] getArray(){
 
@@ -373,14 +358,5 @@ public class BinomialHeap {
         }
 
 
-    }
-
-    private void displayHeap(BinomialHeapNode r)
-    {
-        if (r != null) {
-            displayHeap(r.child);
-            System.out.print(r.key + " ");
-            displayHeap(r.sibling);
-        }
     }
 }

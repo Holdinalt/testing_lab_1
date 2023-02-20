@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import lab1.task3.Entities.*;
+import lab1.task3.entities.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

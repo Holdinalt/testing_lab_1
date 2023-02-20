@@ -73,13 +73,83 @@ class SecondTaskModuleTests {
         }
 
         @Test
-        void MinExtractable(){
+        void MinExtractableInTree(){
             binHeap.extractMin();
             assertArrayEquals(binHeap.getArray(), new int[]{12, 8, 15, 7});
         }
 
-    }
+        @Test
+        void MinExtractableWithoutTree(){
+            binHeap = new BinomialHeap();
+            binHeap.insert(12);
+            binHeap.insert(8);
+            binHeap.insert(7);
 
+            binHeap.extractMin();
+            assertArrayEquals(binHeap.getArray(), new int[]{12, 8});
+        }
+
+        @Test
+        void MinExtractableEmpty(){
+            binHeap = new BinomialHeap();
+
+            binHeap.extractMin();
+            assertArrayEquals(binHeap.getArray(), new int[]{});
+        }
+
+        @Test
+        void MinExtractableSolo(){
+            binHeap = new BinomialHeap();
+            binHeap.insert(12);
+
+            binHeap.extractMin();
+            assertArrayEquals(binHeap.getArray(), new int[]{});
+        }
+
+        @Test
+        void sameNumbers(){
+            binHeap = new BinomialHeap();
+            binHeap.insert(7);
+            binHeap.insert(7);
+            binHeap.insert(7);
+            binHeap.insert(7);
+            binHeap.insert(7);
+            assertArrayEquals(binHeap.getArray(), new int[]{7, 7, 7, 7, 7});
+        }
+
+        @Test
+        void degreeTest(){
+            binHeap.insert(8);
+            binHeap.insert(6);
+
+//            binHeap.insert(6);
+
+//            assertArrayEquals(binHeap.getArray(), new int[]{12, 8, 15, 5, 8, 7, 6, 3});
+//            assertArrayEquals(binHeap.getArray(), new int[]{8, 7, 6, 6, 12, 8, 15, 5});
+
+//            binHeap.extractMin();
+//            assertArrayEquals(binHeap.getArray(), new int[]{15, 12, 8, 8, 7, 6, 6});
+
+            binHeap.insert(4);
+            assertArrayEquals(binHeap.getArray(), new int[]{12, 8, 15, 5, 8, 7, 6, 4});
+
+            binHeap.extractMin();
+            assertArrayEquals(binHeap.getArray(), new int[]{6, 8, 7, 12, 8, 15, 5});
+
+        }
+
+        @Test
+        void decreaseNoExistKey(){
+            binHeap.decreaseKeyValue(20, 7);
+            assertArrayEquals(binHeap.getArray(), new int[]{7, 12, 8, 15, 5});
+        }
+
+        @Test
+        void deleteNoExistKey(){
+            binHeap.delete(20);
+            assertArrayEquals(binHeap.getArray(), new int[]{7, 12, 8, 15, 5});
+        }
+    }
 
 
 }

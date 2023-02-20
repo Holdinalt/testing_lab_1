@@ -1,4 +1,4 @@
-package lab1.task3.Entities;
+package lab1.task3.entities;
 
 public class They extends Entity{
 

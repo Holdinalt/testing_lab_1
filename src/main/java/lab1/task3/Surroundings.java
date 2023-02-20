@@ -1,6 +1,6 @@
 package lab1.task3;
 
-import lab1.task3.Entities.Entity;
+import lab1.task3.entities.Entity;
 
 import java.util.ArrayList;
 import java.util.Arrays;

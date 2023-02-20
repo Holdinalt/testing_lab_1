@@ -72,22 +72,22 @@
                                         <limit>
                                             <counter>CLASS</counter>
                                             <value>MISSEDCOUNT</value>
-                                            <maximum>0.9</maximum>
+                                            <maximum>0</maximum>
                                         </limit>
                                         <limit>
                                             <counter>METHOD</counter>
-                                            <value>MISSEDCOUNT</value>
-                                            <maximum>0.9</maximum>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.9</minimum>
                                         </limit>
                                         <limit>
                                             <counter>LINE</counter>
-                                            <value>MISSEDCOUNT</value>
-                                            <maximum>0.9</maximum>
+                                            <value>COVEREDRATIO</value>
+                                            <minimum>0.9</minimum>
                                         </limit>
                                         <limit>
                                             <counter>INSTRUCTION</counter>
                                             <value>COVEREDRATIO</value>
-                                            <maximum>0.9</maximum>
+                                            <minimum>0.9</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
