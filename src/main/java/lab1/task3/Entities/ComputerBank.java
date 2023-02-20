@@ -1,4 +1,4 @@
-package lab1.task2.Entities;
+package lab1.task3.Entities;
 
 public class ComputerBank extends Entity{
     FrontSide frontSide;

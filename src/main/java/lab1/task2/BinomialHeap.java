@@ -1,4 +1,4 @@
-package lab1.task3;
+package lab1.task2;
 
 
 import java.util.LinkedList;
